@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import decode from 'unescape';
 
-import './Body.css';
+import './css/Body.css';
 import './css/SearchBar.css';
 import './css/SearchItem.css';
 
@@ -76,7 +76,6 @@ class Body extends Component {
     this.state.searchJSON[index].isFav = true;
     this.state.favJSON.push(item);
     this.forceUpdate();
-    console.log(this.state.searchJSON);
   }
 
   removeFav(item, index) {
@@ -115,7 +114,6 @@ class Body extends Component {
   }
 
   renderFavorites() {
-    console.log('Favorites Rendered');
     return this.state.favJSON.map((item, index) => {
       return (
         <div className="fav-item">
