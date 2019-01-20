@@ -1,6 +1,7 @@
 .inputs {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly
 }
 
 .searchbar {
@@ -11,7 +12,7 @@
 .text-input {
   width: 90vw;
   padding: 14px;
-  margin: 0 20px 20px;
+  margin: 0 0 20px;
   border-radius: 2px;
   border-width: 1px;
   border-style: solid;
@@ -22,22 +23,19 @@
 .search-button {
   width: 35px;
   height: 35px;
-  padding: 5px;
-  margin: 0;
+  padding: 8px;
   background-color: green;
   border-style: none;
   border-radius: 4px;
 }
 
-
-
 @media only screen and (max-width: 1000px) {
   .text-input {
-    width: 80vw;
+    width: 85vw;
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 500px) {
   .text-input {
     width: 70vw;
   }
