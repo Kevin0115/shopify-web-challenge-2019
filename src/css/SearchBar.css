@@ -1,0 +1,44 @@
+.inputs {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchbar {
+  padding: 0;
+  margin: 0 0 18px;
+}
+
+.text-input {
+  width: 90vw;
+  padding: 14px;
+  margin: 0 20px 20px;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: lightgrey;
+  font-size: 18px;
+}
+
+.search-button {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  margin: 0;
+  background-color: green;
+  border-style: none;
+  border-radius: 4px;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+  .text-input {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .text-input {
+    width: 70vw;
+  }
+}

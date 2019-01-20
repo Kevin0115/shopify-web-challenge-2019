@@ -1,0 +1,46 @@
+.search-item, .fav-item {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 18px 20px;
+}
+
+.title {
+  flex: 3;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  text-align: left;
+}
+
+.star {
+  height: 25px;
+  cursor: pointer;
+}
+
+.title p {
+  font-size: 18px;
+  margin: 0 0 0 10px;
+}
+
+button {
+  height: 30px;
+  width: 30px;
+}
+
+.desc {
+  flex: 5;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+ul {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-size: 16px;
+  margin: 0 0 14px 6px;
+}
