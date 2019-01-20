@@ -4,7 +4,9 @@
 
 Here you'll find my submission for the Shopify Web Challenege for Summer 2019, which was tailored with ReactJS.
 
-Please feel free to browse my code!
+You can find the project hosted on its [Github Pages Link](http://kevnchoi.com/shopify-web-challenge-2019/).
+
+While you're at it, feel free to check out my [Personal Portfolio Site](http://kevnchoi.com) as well!
 
 A few notes regarding implementation details:
 - There is automatic window scaling; feel free to try it out
