@@ -57,13 +57,14 @@ class Body extends Component {
 
   handleSubmit(e) {
     // Prevent duplicate searches
-    if (this.state.lastSearch != this.state.searchVal) {
+    if (this.state.lastSearch !== this.state.searchVal) {
       this.setState({searchSubmitted: true, lastSearch: this.state.searchVal});
       this.queryJSON(this.state.searchVal);
     }
     e.preventDefault();
   }
 
+  // Responsible for re-populating the searchJSON array with search results
   queryJSON(search) {
     for (let i = 0; i < this.state.wasteJSON.length; i++) {
       if(this.state.wasteJSON[i]['keywords'].includes(search)) {
@@ -80,13 +81,13 @@ class Body extends Component {
 
   removeFav(item, index) {
     for (let i = 0; i < this.state.searchJSON.length; i++) {
-      if (item == this.state.searchJSON[i]) {
+      if (item === this.state.searchJSON[i]) {
         this.state.searchJSON[i].isFav = false;
         break;
       }
     }
     for (let i = 0; i < this.state.favJSON.length; i++) {
-      if (item == this.state.favJSON[i]) {
+      if (item === this.state.favJSON[i]) {
         this.state.favJSON.splice(i, 1);
         break;
       }
@@ -94,7 +95,6 @@ class Body extends Component {
     this.forceUpdate();
   }
 
-  // This function is used to render the search results from the JSON
   renderSearchResults() {
     return this.state.searchJSON.map((item, index) => {
       return (
@@ -104,6 +104,7 @@ class Body extends Component {
               className="star"
               src={item.isFav ? GreenStar: GreyStar}
               onClick={item.isFav ? (() => this.removeFav(item, index)) : (() => this.addToFav(item, index))}
+              alt=""
             />
             <p>{item['title']}</p>
           </div>
@@ -118,7 +119,7 @@ class Body extends Component {
       return (
         <div className="fav-item">
           <div className="title">
-            <img className="star" src={GreenStar} onClick={() => this.removeFav(item, index)}/>
+            <img className="star" src={GreenStar} onClick={() => this.removeFav(item, index)} alt=""/>
             <p>{item['title']}</p>
           </div>
           <div className="desc" dangerouslySetInnerHTML={{__html: decode(item['body'])}}/>
@@ -134,7 +135,7 @@ class Body extends Component {
           <form className="seachform" onSubmit={this.handleSubmit}>
             <div className="inputs">
               <input className="text-input" type="text" value={this.state.value} onChange={this.handleChange} />
-              <input type="image" className="search-button" src={MagIcon} />
+              <input type="image" className="search-button" src={MagIcon} alt=""/>
             </div>
           </form>
         </div>
